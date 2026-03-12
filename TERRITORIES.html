@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Території - Повний Гайд</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { color: #667eea; text-align: center; margin-bottom: 10px; font-size: 2.5em; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+        .category {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid #e9ecef;
+        }
+        .category h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .command {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .command-name {
+            font-weight: bold;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+        }
+        .command-desc { color: #555; margin-top: 5px; line-height: 1.5; }
+        .territory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .territory-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #e9ecef;
+            text-align: center;
+        }
+        .territory-emoji { font-size: 3em; margin-bottom: 10px; }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Території</h1>
+        <p class="subtitle">Повний список всіх територій</p>
+
+        <div class="category">
+            <h2>📋 Команди</h2>
+            <div class="command">
+                <div class="command-name">/guild_territories</div>
+                <div class="command-desc">Карта всіх територій</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_capture &lt;назва&gt;</div>
+                <div class="command-desc">Захопити територію (гільдія 3+ рівня)</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_income</div>
+                <div class="command-desc">Зібрати дохід</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_defense_info &lt;територія&gt;</div>
+                <div class="command-desc">Перевірити захист</div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>🏛️ Список Територій</h2>
+            <div class="territory-grid">
+                <div class="territory-card">
+                    <div class="territory-emoji">🏭</div>
+                    <h3>Шахта</h3>
+                    <p><strong>Бонус:</strong> +100 монет</p>
+                    <p><strong>Дохід:</strong> 50 монет/год</p>
+                </div>
+                <div class="territory-card">
+                    <div class="territory-emoji">🌲</div>
+                    <h3>Ліс</h3>
+                    <p><strong>Бонус:</strong> +50 XP</p>
+                    <p><strong>Дохід:</strong> 25 XP/год</p>
+                </div>
+                <div class="territory-card">
+                    <div class="territory-emoji">🏰</div>
+                    <h3>Замок</h3>
+                    <p><strong>Бонус:</strong> +10% сила</p>
+                    <p><strong>Дохід:</strong> 100 монет/год</p>
+                </div>
+                <div class="territory-card">
+                    <div class="territory-emoji">⛩️</div>
+                    <h3>Храм</h3>
+                    <p><strong>Бонус:</strong> +5% благословення</p>
+                    <p><strong>Дохід:</strong> 75 монет/год</p>
+                </div>
+                <div class="territory-card">
+                    <div class="territory-emoji">🏪</div>
+                    <h3>Ринок</h3>
+                    <p><strong>Бонус:</strong> +15% трейд</p>
+                    <p><strong>Дохід:</strong> 120 монет/год</p>
+                </div>
+                <div class="territory-card">
+                    <div class="territory-emoji">🏯</div>
+                    <h3>Фортеця</h3>
+                    <p><strong>Бонус:</strong> +20% захист</p>
+                    <p><strong>Дохід:</strong> 80 монет/год</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="nav-links">
+                <a href="commands.html" class="nav-link">🏠 Головна</a>
+                <a href="ALL_COMMANDS.html" class="nav-link">📄 Всі Команди</a>
+                <a href="GUILD_COMMANDS.html" class="nav-link">🏰 Гільдії</a>
+                <a href="GUILD_WARRIORS_GUIDE.html" class="nav-link">⚔️ Воїни</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

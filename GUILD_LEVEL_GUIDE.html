@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рівні Гільдії - Гайд</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 { color: #667eea; text-align: center; margin-bottom: 10px; font-size: 2.5em; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+        .category {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border: 2px solid #e9ecef;
+        }
+        .category h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .level-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .level-table th, .level-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .level-table th {
+            background: #667eea;
+            color: white;
+        }
+        .level-table tr:hover {
+            background: #f8f9fa;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+        }
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nav-link {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Рівні Гільдії</h1>
+        <p class="subtitle">Як підвищити рівень гільдії</p>
+
+        <div class="category">
+            <h2>📈 Таблиця Рівнів</h2>
+            <table class="level-table">
+                <thead>
+                    <tr>
+                        <th>Рівень</th>
+                        <th>XP</th>
+                        <th>Учасників</th>
+                        <th>Можливості</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>5</td>
+                        <td>Створення гільдії</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1000</td>
+                        <td>7</td>
+                        <td>Базові функції</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2000</td>
+                        <td>10</td>
+                        <td>Захоплення територій, війни</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>3000</td>
+                        <td>15</td>
+                        <td>Розширені функції</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>4000</td>
+                        <td>20</td>
+                        <td>Сильні воїни</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>9000</td>
+                        <td>50</td>
+                        <td>Еліта</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="category">
+            <h2>💡 Як Отримати XP</h2>
+            <div class="command">
+                <div class="command-name">/contribute &lt;сума&gt;</div>
+                <div class="command-desc">1 монета = 1 XP</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_capture</div>
+                <div class="command-desc">+500 XP за територію</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_war_battle</div>
+                <div class="command-desc">+200 XP за перемогу</div>
+            </div>
+            <div class="command">
+                <div class="command-name">/guild_boss_attack</div>
+                <div class="command-desc">+1000 XP за боса</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="nav-links">
+                <a href="commands.html" class="nav-link">🏠 Головна</a>
+                <a href="ALL_COMMANDS.html" class="nav-link">📄 Всі Команди</a>
+                <a href="GUILD_COMMANDS.html" class="nav-link">🏰 Гільдії</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
