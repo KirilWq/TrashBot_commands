@@ -3,633 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Всі Команди Бота - Повний Список</title>
+    <title>Команди Бота - Повний Список</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        
-        h1 {
-            color: #667eea;
-            text-align: center;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-        
-        .important {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px 20px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-        
-        .category {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 25px;
-            border: 2px solid #e9ecef;
-        }
-        
-        .category h2 {
-            color: #764ba2;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            display: inline-block;
-        }
-        
-        .command {
-            background: white;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .command:hover {
-            transform: translateX(10px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .command-name {
-            font-weight: bold;
-            color: #667eea;
-            font-family: 'Courier New', monospace;
-            font-size: 1.1em;
-        }
-        
-        .command-desc {
-            color: #555;
-            margin-top: 5px;
-            line-height: 1.5;
-        }
-        
-        .example {
-            background: #f0f0f0;
-            padding: 8px 12px;
-            border-radius: 5px;
-            margin-top: 8px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95em;
-            color: #333;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 2px solid #e9ecef;
-            color: #666;
-        }
-        
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .nav-link {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
-        
-        .nav-link:hover {
-            transform: scale(1.05);
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        h1 { color: #667eea; text-align: center; margin-bottom: 10px; font-size: 2.5em; }
+        .subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em; }
+        .important { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px 20px; margin-bottom: 30px; border-radius: 5px; }
+        .important strong { color: #856404; }
+        .category { background: #f8f9fa; border-radius: 15px; padding: 25px; margin-bottom: 25px; border: 2px solid #e9ecef; }
+        .category h2 { color: #764ba2; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; display: inline-block; }
+        .command { background: white; padding: 15px; margin: 10px 0; border-radius: 10px; border-left: 4px solid #667eea; transition: transform 0.2s, box-shadow 0.2s; }
+        .command:hover { transform: translateX(10px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .command-name { font-weight: bold; color: #667eea; font-family: 'Courier New', monospace; font-size: 1.1em; }
+        .command-desc { color: #555; margin-top: 5px; line-height: 1.5; }
+        .example { background: #f0f0f0; padding: 8px 12px; border-radius: 5px; margin-top: 8px; font-family: 'Courier New', monospace; font-size: 0.95em; color: #333; }
+        .footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 2px solid #e9ecef; color: #666; }
+        .bot-link { display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; margin-top: 20px; font-weight: bold; transition: transform 0.2s; }
+        .bot-link:hover { transform: scale(1.05); }
+        @media (max-width: 768px) { .container { padding: 20px; } h1 { font-size: 1.8em; } .command { padding: 12px; } }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>📜 Всі Команди Бота</h1>
-        <p class="subtitle">Повний список з 100+ команд</p>
-        
+        <h1>🤖 Команди Бота</h1>
+        <p class="subtitle">Повний список всіх команд з поясненнями • 175 команд</p>
+
         <div class="important">
             <strong>⚠️ ВАЖЛИВО:</strong> Всі команди використовують підкреслення (_) між словами!<br>
             ✅ Правильно: <code>/guild_territories</code><br>
             ❌ Неправильно: <code>/guildterritories</code>
         </div>
 
-        <!-- Меню -->
+        <!-- Основні -->
         <div class="category">
-            <h2>🎯 Швидкі Меню</h2>
-            <div class="command">
-                <div class="command-name">/guild_menu</div>
-                <div class="command-desc">Головне меню гільдії</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/warriors_menu</div>
-                <div class="command-desc">Меню воїнів</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/items_menu</div>
-                <div class="command-desc">Меню предметів</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/genetics_menu</div>
-                <div class="command-desc">Меню генетики</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/trade_menu</div>
-                <div class="command-desc">Меню трейдів</div>
-            </div>
+            <h2>🚀 Основні Команди</h2>
+            <div class="command"><div class="command-name">/start</div><div class="command-desc">🚀 Почати роботу з ботом</div></div>
+            <div class="command"><div class="command-name">/help</div><div class="command-desc">📜 Допомога та всі команди</div></div>
+            <div class="command"><div class="command-name">/menu</div><div class="command-desc">🎯 Головне меню бота</div></div>
+            <div class="command"><div class="command-name">/members</div><div class="command-desc">👥 Учасники чату</div></div>
+            <div class="command"><div class="command-name">/userinfo &lt;ID&gt;</div><div class="command-desc">ℹ️ Інформація про користувача</div></div>
+            <div class="command"><div class="command-name">/id</div><div class="command-desc">🔢 Показати ID користувача</div></div>
+            <div class="command"><div class="command-name">/top</div><div class="command-desc">🏆 Топ гравців</div></div>
         </div>
 
-        <!-- Гільдії -->
+        <!-- Гра "Вирости Хряка" -->
         <div class="category">
-            <h2>🏰 Гільдії</h2>
-            <div class="command">
-                <div class="command-name">/createguild &lt;назва&gt;</div>
-                <div class="command-desc">Створити гільдію (1000 монет)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild &lt;назва&gt;</div>
-                <div class="command-desc">Інформація про гільдію</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guildjoin &lt;назва&gt;</div>
-                <div class="command-desc">Вступити в гільдію</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guildleave</div>
-                <div class="command-desc">Покинути гільдію</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guildtop</div>
-                <div class="command-desc">Топ гільдій</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/contribute &lt;сума&gt;</div>
-                <div class="command-desc">Внесок монет (1 монета = 1 XP)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/promote &lt;user_id&gt;</div>
-                <div class="command-desc">Підвищити до офіцера</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/demote &lt;user_id&gt;</div>
-                <div class="command-desc">Знизити офіцера</div>
-            </div>
+            <h2>🐷 Гра "Вирости Хряка"</h2>
+            <div class="command"><div class="command-name">/grow</div><div class="command-desc">🐷 Отримати хряка (перший раз безкоштовно)</div></div>
+            <div class="command"><div class="command-name">/feed</div><div class="command-desc">🍽️ Нагодувати хряка (раз на 12 годин, +5 монет)</div></div>
+            <div class="command"><div class="command-name">/my</div><div class="command-desc">📊 Показати свого хряка</div></div>
+            <div class="command"><div class="command-name">/name &lt;ім'я&gt;</div><div class="command-desc">✏️ Перейменувати хряка</div></div>
+            <div class="command"><div class="command-name">/hryaketop</div><div class="command-desc">🏅 Топ хряків чату за вагою</div></div>
+            <div class="command"><div class="command-name">/globaltop</div><div class="command-desc">🌍 Глобальний топ хряків всіх чатів</div></div>
+            <div class="command"><div class="command-name">/achievements</div><div class="command-desc">🏆 Твої досягнення</div></div>
+            <div class="command"><div class="command-name">/duel</div><div class="command-desc">⚔️ Виклик на дуель (inline кнопки)</div></div>
+            <div class="command"><div class="command-name">/duelteambattle</div><div class="command-desc">👥 Командна дуель (2v2, 3v3)</div></div>
         </div>
 
-        <!-- Території -->
+        <!-- Економіка -->
         <div class="category">
-            <h2>🗺️ Території</h2>
-            <div class="command">
-                <div class="command-name">/guild_territories</div>
-                <div class="command-desc">Карта територій</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_capture &lt;назва&gt;</div>
-                <div class="command-desc">Захопити територію</div>
-                <div class="example">Приклад: /guild_capture Шахта</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_income</div>
-                <div class="command-desc">Зібрати дохід (монети в гільдію, XP гравцю)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_withdraw_coins &lt;сума&gt;</div>
-                <div class="command-desc">Вивести монети (owner/officer)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_defense_info &lt;територія&gt;</div>
-                <div class="command-desc">Перевірити захист</div>
-            </div>
-        </div>
-
-        <!-- Воїни -->
-        <div class="category">
-            <h2>⚔️ Воїни</h2>
-            <div class="command">
-                <div class="command-name">/guild_warriors</div>
-                <div class="command-desc">Армія гільдії</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_buy_warrior &lt;тип&gt; &lt;кількість&gt;</div>
-                <div class="command-desc">Купити воїнів</div>
-                <div class="example">
-                    Типи: regular (100💰), matochnik (500💰), elite (1000💰), legendary (5000💰)
-                </div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_defend &lt;територія&gt; &lt;тип&gt; &lt;кількість&gt;</div>
-                <div class="command-desc">Захист території</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_attack &lt;територія&gt;</div>
-                <div class="command-desc">Атака території</div>
-            </div>
-        </div>
-
-        <!-- Війни -->
-        <div class="category">
-            <h2>🎖️ Війни</h2>
-            <div class="command">
-                <div class="command-name">/guild_war_declare &lt;гільдія&gt;</div>
-                <div class="command-desc">Оголосити війну</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_war_join</div>
-                <div class="command-desc">Приєднатися</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_war_battle</div>
-                <div class="command-desc">Битися (щодня)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_war_status</div>
-                <div class="command-desc">Статус воєн</div>
-            </div>
-        </div>
-
-        <!-- Боси -->
-        <div class="category">
-            <h2>🐲 Боси</h2>
-            <div class="command">
-                <div class="command-name">/guild_boss_spawn &lt;ім'я&gt; &lt;рівень&gt;</div>
-                <div class="command-desc">Спавнити боса (1000 монет)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_boss_attack</div>
-                <div class="command-desc">Атакувати боса</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_boss_info</div>
-                <div class="command-desc">Інфо про боса</div>
-            </div>
-        </div>
-
-        <!-- Предмети -->
-        <div class="category">
-            <h2>🎒 Предмети</h2>
-            <div class="command">
-                <div class="command-name">/inventory</div>
-                <div class="command-desc">Особистий інвентар</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/use_item &lt;ID&gt;</div>
-                <div class="command-desc">Використати предмет</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_items</div>
-                <div class="command-desc">Предмети гільдії</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/guild_claim_item &lt;ID&gt; &lt;кількість&gt;</div>
-                <div class="command-desc">Вивести в інвентар</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/item_trade &lt;предмет&gt; &lt;кількість&gt;</div>
-                <div class="command-desc">Трейд (у відповідь)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/item_trades</div>
-                <div class="command-desc">Активні трейди</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/item_accept &lt;ID&gt;</div>
-                <div class="command-desc">Прийняти трейд</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/item_cancel &lt;ID&gt;</div>
-                <div class="command-desc">Скасувати трейд</div>
-            </div>
+            <h2>💰 Економіка та Магазин</h2>
+            <div class="command"><div class="command-name">/balance</div><div class="command-desc">💰 Баланс монет, XP та Crypto</div></div>
+            <div class="command"><div class="command-name">/daily</div><div class="command-desc">🎁 Щоденний бонус (10+ монет, 5+ XP)</div></div>
+            <div class="command"><div class="command-name">/shop</div><div class="command-desc">🏪 Магазин предметів</div></div>
+            <div class="command"><div class="command-name">/buy &lt;предмет&gt;</div><div class="command-desc">🛒 Купити предмет</div></div>
+            <div class="command"><div class="command-name">/inventory</div><div class="command-desc">🎒 Твій інвентар (предмети + скіни)</div></div>
+            <div class="command"><div class="command-name">/use &lt;предмет&gt;</div><div class="command-desc">⚡ Використати предмет</div></div>
         </div>
 
         <!-- Казино -->
         <div class="category">
-            <h2>🎰 Приватні Казино</h2>
-            <div class="command">
-                <div class="command-name">/casino_create &lt;назва&gt; [монети]</div>
-                <div class="command-desc">Створити казино (500 монет)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino</div>
-                <div class="command-desc">Інфо про казино</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino_play &lt;сума&gt;</div>
-                <div class="command-desc">Грати</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino_deposit &lt;сума&gt;</div>
-                <div class="command-desc">Внести монети</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino_withdraw &lt;сума&gt;</div>
-                <div class="command-desc">Вивести монети</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino_limits</div>
-                <div class="command-desc">Налаштування</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/casino_stats</div>
-                <div class="command-desc">Статистика</div>
-            </div>
+            <h2>🎰 Казино та Розваги</h2>
+            <div class="command"><div class="command-name">/roulette &lt;сума&gt; &lt;ставка&gt;</div><div class="command-desc">🎰 Рулетка (ставки на вагу хряка)</div></div>
+            <div class="command"><div class="command-name">/lottery</div><div class="command-desc">🎫 Лотерея (квиток за 5 кг ваги)</div></div>
+            <div class="command"><div class="command-name">/casino_create &lt;назва&gt; [монети]</div><div class="command-desc">🏦 Створити приватне казино (500 монет)</div></div>
+            <div class="command"><div class="command-name">/casino</div><div class="command-desc">📊 Інформація про твоє казино</div></div>
+            <div class="command"><div class="command-name">/casino_play &lt;сума&gt; [ID]</div><div class="command-desc">🎲 Грати в казино (будь-яке в чаті)</div></div>
+            <div class="command"><div class="command-name">/casino_deposit &lt;сума&gt;</div><div class="command-desc">💵 Внести монети в казино</div></div>
+            <div class="command"><div class="command-name">/casino_withdraw &lt;сума&gt;</div><div class="command-desc">💸 Вивести монети з казино</div></div>
+            <div class="command"><div class="command-name">/casino_limits</div><div class="command-desc">⚙️ Налаштувати обмеження (min/max/chance)</div></div>
+            <div class="command"><div class="command-name">/casino_stats</div><div class="command-desc">📈 Статистика казино (ігри, виграші)</div></div>
         </div>
 
-        <!-- Генетика -->
+        <!-- Трейди -->
         <div class="category">
-            <h2>🧬 Генетика</h2>
-            <div class="command">
-                <div class="command-name">/genes</div>
-                <div class="command-desc">Гени хряка</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/breed</div>
-                <div class="command-desc">Схрещування (100 монет)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/children</div>
-                <div class="command-desc">Діти</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childinfo ID</div>
-                <div class="command-desc">Інфо про дитину</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childbonus</div>
-                <div class="command-desc">Бонуси від дітей</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childraid ID</div>
-                <div class="command-desc">Рейд дитини</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childduel ID</div>
-                <div class="command-desc">Дуель дітей</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childtrain ID</div>
-                <div class="command-desc">Тренування (+5 кг, 50💰)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/renamechild ID ім'я</div>
-                <div class="command-desc">Перейменувати дитину</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childtop</div>
-                <div class="command-desc">Топ дітей</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/sacrificechild ID</div>
-                <div class="command-desc">Жертва (монети + XP)</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/childmarry ID1 ID2</div>
-                <div class="command-desc">Одружити дітей</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/pregnancies</div>
-                <div class="command-desc">Активні вагітності</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/claimchildren</div>
-                <div class="command-desc">Отримати дітей</div>
-            </div>
+            <h2>🤝 Трейди</h2>
+            <div class="command"><div class="command-name">/trade @user &lt;сума&gt;</div><div class="command-desc">💱 Створити трейд (у відповідь на повідомлення)</div></div>
+            <div class="command"><div class="command-name">/trades</div><div class="command-desc">📋 Активні трейди</div></div>
+            <div class="command"><div class="command-name">/accept &lt;ID&gt;</div><div class="command-desc">✅ Прийняти трейд</div></div>
+            <div class="command"><div class="command-name">/cancel &lt;ID&gt;</div><div class="command-desc">❌ Скасувати трейд</div></div>
+        </div>
+
+        <!-- Квіз -->
+        <div class="category">
+            <h2>🧠 Квіз (Вікторина)</h2>
+            <div class="command"><div class="command-name">/quiz</div><div class="command-desc">🧠 Почати вікторину (10 питань)</div></div>
+            <div class="command"><div class="command-name">/quizstats</div><div class="command-desc">📊 Статистика квізу (правильні/неправильні)</div></div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="category">
+            <h2>📊 Статистика</h2>
+            <div class="command"><div class="command-name">/mystats</div><div class="command-desc">📈 Твоя особиста статистика</div></div>
+            <div class="command"><div class="command-name">/stats</div><div class="command-desc">📊 Статистика чату</div></div>
+            <div class="command"><div class="command-name">/leaderboard</div><div class="command-desc">🏆 Лідерборд гравців за тиждень</div></div>
+            <div class="command"><div class="command-name">/activity</div><div class="command-desc">📅 Твоя активність (повідомлення)</div></div>
+        </div>
+
+        <!-- Генетика і Діти -->
+        <div class="category">
+            <h2>👶 Генетика та Діти</h2>
+            <div class="command"><div class="command-name">/trachen</div><div class="command-desc">💕 Спарювання хряків (12 год кулдаун)</div></div>
+            <div class="command"><div class="command-name">/breed</div><div class="command-desc">🧬 Схрещування з генетикою (24 год, 100 монет)</div></div>
+            <div class="command"><div class="command-name">/genes</div><div class="command-desc">🧬 Гени твого хряка (рідкість, бонуси, колір)</div></div>
+            <div class="command"><div class="command-name">/children</div><div class="command-desc">👶 Твої діти (всі потомки)</div></div>
+            <div class="command"><div class="command-name">/childinfo &lt;ID&gt;</div><div class="command-desc">ℹ️ Інформація про конкретну дитину</div></div>
+            <div class="command"><div class="command-name">/childbonus</div><div class="command-desc">🎁 Бонуси від дітей (вага, XP, монети)</div></div>
+            <div class="command"><div class="command-name">/childtrain &lt;ID&gt;</div><div class="command-desc">💪 Тренувати дитину (+5 ваги, 50 монет)</div></div>
+            <div class="command"><div class="command-name">/childraid &lt;ID&gt; [тип]</div><div class="command-desc">🗡️ Відправити в рейд (coins/xp/items)</div></div>
+            <div class="command"><div class="command-name">/childclaim &lt;ID рейду&gt;</div><div class="command-desc">✅ Отримати нагороду з рейду</div></div>
+            <div class="command"><div class="command-name">/childstamina_upgrade</div><div class="command-desc">⬆️ Покращити витривалість (збільшує час рейду)</div></div>
+            <div class="command"><div class="command-name">/childduel &lt;ID&gt;</div><div class="command-desc">⚔️ Дуель дітей з іншими</div></div>
+            <div class="command"><div class="command-name">/renamechild &lt;ID&gt; &lt;ім'я&gt;</div><div class="command-desc">✏️ Перейменувати дитину</div></div>
+            <div class="command"><div class="command-name">/childtop</div><div class="command-desc">🏆 Топ дітей за вагою</div></div>
+            <div class="command"><div class="command-name">/sacrificechild &lt;ID&gt;</div><div class="command-desc">🩸 Жертва дитини (монети + XP)</div></div>
+            <div class="command"><div class="command-name">/childmarry &lt;ID1&gt; &lt;ID2&gt;</div><div class="command-desc">💒 Одружити дітей (створення онуків)</div></div>
+            <div class="command"><div class="command-name">/pregnancies</div><div class="command-desc">🤰 Активні вагітності</div></div>
+            <div class="command"><div class="command-name">/claimchildren</div><div class="command-desc">🎁 Отримати дітей (після вагітності)</div></div>
+        </div>
+
+        <!-- Турніри -->
+        <div class="category">
+            <h2>🏆 Турніри</h2>
+            <div class="command"><div class="command-name">/tournament create</div><div class="command-desc">🏆 Створити турнір</div></div>
+            <div class="command"><div class="command-name">/tournament join</div><div class="command-desc">🚪 Приєднатися до турніру</div></div>
+            <div class="command"><div class="command-name">/tournament start</div><div class="command-desc">▶️ Почати турнір (організатор)</div></div>
+            <div class="command"><div class="command-name">/tournament info</div><div class="command-desc">ℹ️ Інформація про турнір</div></div>
+        </div>
+
+        <!-- Гільдії -->
+        <div class="category">
+            <h2>🏰 Гільдії - Основні</h2>
+            <div class="command"><div class="command-name">/createguild &lt;назва&gt;</div><div class="command-desc">🏰 Створити гільдію (1000 монет)</div></div>
+            <div class="command"><div class="command-name">/guild &lt;назва&gt;</div><div class="command-desc">📊 Інформація про гільдію</div></div>
+            <div class="command"><div class="command-name">/guildjoin &lt;назва&gt;</div><div class="command-desc">🚪 Вступити в гільдію</div></div>
+            <div class="command"><div class="command-name">/guildleave</div><div class="command-desc">🚪 Покинути гільдію</div></div>
+            <div class="command"><div class="command-name">/guildtop</div><div class="command-desc">🏆 Топ гільдій за рівнем</div></div>
+            <div class="command"><div class="command-name">/contribute &lt;сума&gt;</div><div class="command-desc">💰 Внести монети в гільдію (1 монета = 1 XP)</div></div>
+            <div class="command"><div class="command-name">/promote &lt;user_id&gt;</div><div class="command-desc">⬆️ Підвищити до офіцера (власник)</div></div>
+            <div class="command"><div class="command-name">/demote &lt;user_id&gt;</div><div class="command-desc">⬇️ Знизити офіцера (власник)</div></div>
+            <div class="command"><div class="command-name">/transferguild &lt;user_id&gt;</div><div class="command-desc">👑 Передати володіння гільдією</div></div>
+            <div class="command"><div class="command-name">/deleteguild</div><div class="command-desc">❌ Видалити гільдію (власник)</div></div>
+        </div>
+
+        <!-- Території -->
+        <div class="category">
+            <h2>🗺️ Гільдії - Території</h2>
+            <div class="command"><div class="command-name">/guild_territories</div><div class="command-desc">🗺️ Карта всіх територій</div></div>
+            <div class="command"><div class="command-name">/guild_capture &lt;назва&gt;</div><div class="command-desc">⚔️ Захопити територію (гільдія 3+ рівня)</div></div>
+            <div class="command"><div class="command-name">/guild_income</div><div class="command-desc">💰 Зібрати дохід з територій</div></div>
+            <div class="command"><div class="command-name">/guild_attack &lt;територія&gt;</div><div class="command-desc">⚔️ Атакувати територію</div></div>
+            <div class="command"><div class="command-name">/guild_defend &lt;територія&gt; &lt;тип&gt; &lt;кількість&gt;</div><div class="command-desc">🛡️ Поставити воїнів на захист</div></div>
+            <div class="command"><div class="command-name">/guild_defense_info &lt;територія&gt;</div><div class="command-desc">📊 Інформація про захист території</div></div>
+        </div>
+
+        <!-- Війни -->
+        <div class="category">
+            <h2>⚔️ Гільдії - Війни</h2>
+            <div class="command"><div class="command-name">/guild_war_declare &lt;гільдія&gt;</div><div class="command-desc">📢 Оголосити війну іншій гільдії</div></div>
+            <div class="command"><div class="command-name">/guild_war_join</div><div class="command-desc">⚔️ Приєднатися до війни</div></div>
+            <div class="command"><div class="command-name">/guild_war_battle</div><div class="command-desc">⚔️ Битися у війні (щодня)</div></div>
+            <div class="command"><div class="command-name">/guild_war_status</div><div class="command-desc">📊 Статус активних воєн</div></div>
+        </div>
+
+        <!-- Боси -->
+        <div class="category">
+            <h2>🐲 Гільдії - Боси</h2>
+            <div class="command"><div class="command-name">/guild_boss_spawn &lt;ім'я&gt; &lt;рівень&gt;</div><div class="command-desc">🐲 Спавнити боса (1000 монет)</div></div>
+            <div class="command"><div class="command-name">/guild_boss_attack</div><div class="command-desc">⚔️ Атакувати боса (кулдаун 2 год)</div></div>
+            <div class="command"><div class="command-name">/guild_boss_info</div><div class="command-desc">📊 Інформація про боса</div></div>
+        </div>
+
+        <!-- Воїни -->
+        <div class="category">
+            <h2>⚔️ Гільдії - Воїни</h2>
+            <div class="command"><div class="command-name">/guild_warriors</div><div class="command-desc">⚔️ Армія гільдії</div></div>
+            <div class="command"><div class="command-name">/guild_buy_warrior &lt;тип&gt; &lt;кількість&gt;</div><div class="command-desc">🛒 Купити воїнів</div><div class="example">Типи: regular (100 монет), matochnik (500), elite (1000), legendary (5000)</div></div>
+        </div>
+
+        <!-- Предмети -->
+        <div class="category">
+            <h2>🎒 Гільдії - Предмети</h2>
+            <div class="command"><div class="command-name">/guild_chest</div><div class="command-desc">📦 Скринька гільдії (монети)</div></div>
+            <div class="command"><div class="command-name">/guild_items</div><div class="command-desc">🎒 Предмети гільдії</div></div>
+            <div class="command"><div class="command-name">/guild_donate &lt;предмет&gt; &lt;кількість&gt;</div><div class="command-desc">🎁 Внести предмет в гільдію</div></div>
+            <div class="command"><div class="command-name">/guild_withdraw &lt;ID&gt; &lt;кількість&gt;</div><div class="command-desc">💸 Вивести предмет з гільдії</div></div>
+            <div class="command"><div class="command-name">/guild_claim_item &lt;ID&gt; &lt;кількість&gt;</div><div class="command-desc">📦 Вивести предмет в інвентар</div></div>
+            <div class="command"><div class="command-name">/guild_withdraw_coins &lt;сума&gt;</div><div class="command-desc">💰 Вивести монети з гільдії</div></div>
+        </div>
+
+        <!-- Трейд Предметів -->
+        <div class="category">
+            <h2>🤝 Трейд Предметів</h2>
+            <div class="command"><div class="command-name">/item_trade &lt;предмет&gt; &lt;кількість&gt;</div><div class="command-desc">💱 Створити трейд предметом (у відповідь)</div></div>
+            <div class="command"><div class="command-name">/item_trades</div><div class="command-desc">📋 Активні трейди предметами</div></div>
+            <div class="command"><div class="command-name">/item_accept &lt;ID&gt;</div><div class="command-desc">✅ Прийняти трейд</div></div>
+            <div class="command"><div class="command-name">/item_cancel &lt;ID&gt;</div><div class="command-desc">❌ Скасувати трейд</div></div>
+        </div>
+
+        <!-- Трейд Скінами -->
+        <div class="category">
+            <h2>🎨 Трейд Скінами</h2>
+            <div class="command"><div class="command-name">/skintrade &lt;назва&gt; &lt;кількість&gt;</div><div class="command-desc">💱 Трейд скінами (у відповідь)</div></div>
+            <div class="command"><div class="command-name">/skintrades</div><div class="command-desc">📋 Активні трейди скінів</div></div>
+            <div class="command"><div class="command-name">/skinaccept &lt;ID&gt;</div><div class="command-desc">✅ Прийняти трейд скіна</div></div>
+            <div class="command"><div class="command-name">/skincancel &lt;ID&gt;</div><div class="command-desc">❌ Скасувати трейд скіна</div></div>
+        </div>
+
+        <!-- Скіни -->
+        <div class="category">
+            <h2>🎨 Скіни</h2>
+            <div class="command"><div class="command-name">/skins</div><div class="command-desc">🎨 Всі скіни (магазин + твої)</div></div>
+            <div class="command"><div class="command-name">/buyskin &lt;назва&gt;</div><div class="command-desc">🛒 Купити скін</div></div>
+            <div class="command"><div class="command-name">/equipskin &lt;назва&gt;</div><div class="command-desc">👕 Одягнути скін</div></div>
+        </div>
+
+        <!-- Бос-Дуелі -->
+        <div class="category">
+            <h2>🐲 Бос-Дуелі</h2>
+            <div class="command"><div class="command-name">/boss</div><div class="command-desc">🐲 Інформація про боса</div></div>
+        </div>
+
+        <!-- Івенти -->
+        <div class="category">
+            <h2>🎁 Івенти</h2>
+            <div class="command"><div class="command-name">/events</div><div class="command-desc">🎉 Активні івенти</div></div>
+            <div class="command"><div class="command-name">/eventsclaim</div><div class="command-desc">🎁 Отримати нагороду за івент</div></div>
+            <div class="command"><div class="command-name">/eventjoin</div><div class="command-desc">🚪 Приєднатися до івенту</div></div>
+            <div class="command"><div class="command-name">/eventprogress</div><div class="command-desc">📊 Прогрес в івенті</div></div>
         </div>
 
         <!-- Розваги -->
         <div class="category">
-            <h2>🎉 Розваги</h2>
-            <div class="command">
-                <div class="command-name">/pidor</div>
-                <div class="command-desc">Образити гравця</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/roast</div>
-                <div class="command-desc">Пожартувати</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/insult</div>
-                <div class="command-desc">Образити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/hardinsult</div>
-                <div class="command-desc">Жорстка образа</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/slap</div>
-                <div class="command-desc">Вдарити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/fortune</div>
-                <div class="command-desc">Передбачення</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/whosgay</div>
-                <div class="command-desc">Хто гей</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/rate</div>
-                <div class="command-desc">Оцінити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/fact</div>
-                <div class="command-desc">Випадковий факт</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/choose</div>
-                <div class="command-desc">Вибрати випадково</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/top</div>
-                <div class="command-desc">Топ гравців</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/такні</div>
-                <div class="command-desc">Гра Так/Ні</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/random</div>
-                <div class="command-desc">Випадковий користувач</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/kickme</div>
-                <div class="command-desc">Вийти з чату</div>
-            </div>
+            <h2>🎭 Розваги та Образливі</h2>
+            <div class="command"><div class="command-name">/pidor</div><div class="command-desc">🎯 Хто сьогодні підор</div></div>
+            <div class="command"><div class="command-name">/roast</div><div class="command-desc">🔥 Пожартувати над гравцем</div></div>
+            <div class="command"><div class="command-name">/insult</div><div class="command-desc">😤 Образити гравця</div></div>
+            <div class="command"><div class="command-name">/hardinsult</div><div class="command-desc">💀 Жорстка образа</div></div>
+            <div class="command"><div class="command-name">/slap</div><div class="command-desc">👊 Вдарити гравця</div></div>
+            <div class="command"><div class="command-name">/fortune</div><div class="command-desc">🔮 Передбачення на день</div></div>
+            <div class="command"><div class="command-name">/whosgay</div><div class="command-desc">🏳️‍🌈 Хто гей сьогодні</div></div>
+            <div class="command"><div class="command-name">/rate</div><div class="command-desc">⭐ Оцінити гравця (0-10)</div></div>
+            <div class="command"><div class="command-name">/fact</div><div class="command-desc">📚 Випадковий факт</div></div>
+            <div class="command"><div class="command-name">/choose</div><div class="command-desc">🎲 Вибрати випадкового гравця</div></div>
+            <div class="command"><div class="command-name">/такні</div><div class="command-desc">❓ Гра "Так/Ні" (відповідь на питання)</div></div>
+            <div class="command"><div class="command-name">/random</div><div class="command-desc">🎲 Випадковий користувач</div></div>
+            <div class="command"><div class="command-name">/kickme</div><div class="command-desc">🚪 Вийти з чату</div></div>
         </div>
 
-        <!-- Адмінки -->
+        <!-- Адмін Чат -->
         <div class="category">
-            <h2>🔧 Адмін Команди</h2>
-            <div class="command">
-                <div class="command-name">/mute &lt;час&gt;</div>
-                <div class="command-desc">Замутити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/unmute</div>
-                <div class="command-desc">Розмутити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/provin &lt;час&gt;</div>
-                <div class="command-desc">Провинити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/unprovin</div>
-                <div class="command-desc">Пробачити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/provinlist</div>
-                <div class="command-desc">Список провинних</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/warn &lt;причина&gt;</div>
-                <div class="command-desc">Попередити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/warnings</div>
-                <div class="command-desc">Попередження</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/clearwarns</div>
-                <div class="command-desc">Очистити попередження</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/ban</div>
-                <div class="command-desc">Забанити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/unban</div>
-                <div class="command-desc">Розбанити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/del</div>
-                <div class="command-desc">Видалити повідомлення</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/pin</div>
-                <div class="command-desc">Закріпити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/unpin</div>
-                <div class="command-desc">Відкріпити</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/spam</div>
-                <div class="command-desc">Перевірити спам</div>
-            </div>
+            <h2>🛡️ Адмін-Команди (Чат)</h2>
+            <div class="command"><div class="command-name">/mute &lt;час&gt;</div><div class="command-desc">🔇 Замутити користувача</div></div>
+            <div class="command"><div class="command-name">/unmute</div><div class="command-desc">🔊 Розмутити користувача</div></div>
+            <div class="command"><div class="command-name">/provin &lt;час&gt;</div><div class="command-desc">😠 Провинити користувача</div></div>
+            <div class="command"><div class="command-name">/unprovin</div><div class="command-desc">😊 Пробачити користувача</div></div>
+            <div class="command"><div class="command-name">/provinlist</div><div class="command-desc">📋 Список провинних</div></div>
+            <div class="command"><div class="command-name">/ban</div><div class="command-desc">🚫 Забанити користувача</div></div>
+            <div class="command"><div class="command-name">/unban</div><div class="command-desc">✅ Розбанити користувача</div></div>
+            <div class="command"><div class="command-name">/warn &lt;причина&gt;</div><div class="command-desc">⚠️ Попередити користувача</div></div>
+            <div class="command"><div class="command-name">/warnings</div><div class="command-desc">📋 Попередження користувача</div></div>
+            <div class="command"><div class="command-name">/clearwarns</div><div class="command-desc">🧹 Очистити попередження</div></div>
+            <div class="command"><div class="command-name">/del</div><div class="command-desc">🗑️ Видалити повідомлення</div></div>
+            <div class="command"><div class="command-name">/pin</div><div class="command-desc">📌 Закріпити повідомлення</div></div>
+            <div class="command"><div class="command-name">/unpin</div><div class="command-desc">📍 Відкріпити повідомлення</div></div>
+            <div class="command"><div class="command-name">/spam</div><div class="command-desc">📊 Перевірити спам</div></div>
         </div>
 
-        <!-- Інше -->
+        <!-- Адмін Бот -->
         <div class="category">
-            <h2>⚙️ Інше</h2>
-            <div class="command">
-                <div class="command-name">/start</div>
-                <div class="command-desc">Почати роботу</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/menu</div>
-                <div class="command-desc">Головне меню</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/help</div>
-                <div class="command-desc">Всі команди</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/dbstatus</div>
-                <div class="command-desc">Статус бази даних</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/resetdb</div>
-                <div class="command-desc">Перезавантажити базу</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/webapp</div>
-                <div class="command-desc">Web App</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/convert</div>
-                <div class="command-desc">Конвертація/crypto</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/crypto</div>
-                <div class="command-desc">Криобаланс</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/events</div>
-                <div class="command-desc">Активні івенти</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/eventsclaim</div>
-                <div class="command-desc">Отримати нагороду</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/eventjoin</div>
-                <div class="command-desc">Приєднатися до івенту</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/eventprogress</div>
-                <div class="command-desc">Прогрес івенту</div>
-            </div>
-            <div class="command">
-                <div class="command-name">/cleanevents</div>
-                <div class="command-desc">Очистити івенти</div>
-            </div>
+            <h2>🛠️ Адмін-Команди (Бот)</h2>
+            <div class="command"><div class="command-name">/test_admin</div><div class="command-desc">🧪 Тест адмін доступу</div></div>
+            <div class="command"><div class="command-name">/admin_weight &lt;user_id&gt; &lt;вага&gt;</div><div class="command-desc">⚖️ Змінити вагу хряка</div></div>
+            <div class="command"><div class="command-name">/admin_addweight &lt;user_id&gt; &lt;кг&gt;</div><div class="command-desc">➕ Додати вагу хряку</div></div>
+            <div class="command"><div class="command-name">/admin_addcoins &lt;user_id&gt; &lt;сума&gt;</div><div class="command-desc">💰 Додати монети</div></div>
+            <div class="command"><div class="command-name">/admin_addxp &lt;user_id&gt; &lt;сума&gt;</div><div class="command-desc">⭐ Додати XP</div></div>
+            <div class="command"><div class="command-name">/admin_additem &lt;user_id&gt; &lt;предмет&gt;</div><div class="command-desc">🎁 Додати предмет</div></div>
+            <div class="command"><div class="command-name">/admin_stats</div><div class="command-desc">📊 Адмін статистика</div></div>
+            <div class="command"><div class="command-name">/admin_help</div><div class="command-desc">❓ Адмін допомога</div></div>
+            <div class="command"><div class="command-name">/admin_removecoins &lt;user_id&gt; &lt;сума&gt;</div><div class="command-desc">💸 Видалити монети</div></div>
+            <div class="command"><div class="command-name">/admin_removexp &lt;user_id&gt; &lt;сума&gt;</div><div class="command-desc">⬇️ Видалити XP</div></div>
+            <div class="command"><div class="command-name">/admin_removeweight &lt;user_id&gt; &lt;кг&gt;</div><div class="command-desc">⬇️ Видалити вагу</div></div>
+            <div class="command"><div class="command-name">/admin_removeitem &lt;user_id&gt; &lt;предмет&gt;</div><div class="command-desc">🗑️ Видалити предмет</div></div>
+            <div class="command"><div class="command-name">/admin_clearinventory &lt;user_id&gt;</div><div class="command-desc">🧹 Очистити інвентар</div></div>
+            <div class="command"><div class="command-name">/admin_addskin &lt;user_id&gt; &lt;скін&gt;</div><div class="command-desc">🎨 Додати скін</div></div>
+            <div class="command"><div class="command-name">/admin_removeskin &lt;user_id&gt; &lt;скін&gt;</div><div class="command-desc">🗑️ Видалити скін</div></div>
+            <div class="command"><div class="command-name">/admin_addguildcoins &lt;гільдія&gt; &lt;сума&gt;</div><div class="command-desc">💰 Додати монети гільдії</div></div>
+            <div class="command"><div class="command-name">/admin_removeguildcoins &lt;гільдія&gt; &lt;сума&gt;</div><div class="command-desc">💸 Видалити монети гільдії</div></div>
+            <div class="command"><div class="command-name">/admin_addguildxp &lt;гільдія&gt; &lt;сума&gt;</div><div class="command-desc">⭐ Додати XP гільдії</div></div>
+        </div>
+
+        <!-- Системні -->
+        <div class="category">
+            <h2>⚙️ Системні</h2>
+            <div class="command"><div class="command-name">/clearcache</div><div class="command-desc">🧹 Очистити кеш бота</div></div>
+            <div class="command"><div class="command-name">/debug_cache</div><div class="command-desc">🔍 Показати вміст кешу (адмін)</div></div>
+            <div class="command"><div class="command-name">/fetch_all_members</div><div class="command-desc">👥 Автоматично додати всіх учасників чату (адмін)</div></div>
+            <div class="command"><div class="command-name">/adduser @username</div><div class="command-desc">➕ Додати юзернейм в базу</div></div>
+            <div class="command"><div class="command-name">/removeuser @username</div><div class="command-desc">➖ Видалити юзернейм</div></div>
+            <div class="command"><div class="command-name">/dbstatus</div><div class="command-desc">📊 Статус бази даних</div></div>
+            <div class="command"><div class="command-name">/resetdb</div><div class="command-desc">🔄 Перезавантажити базу (адмін)</div></div>
+            <div class="command"><div class="command-name">/cleanevents</div><div class="command-desc">🧹 Очистити дублікати івентів</div></div>
+            <div class="command"><div class="command-name">/webapp</div><div class="command-desc">🌐 Веб-додаток бота</div></div>
         </div>
 
         <div class="footer">
-            <p><strong>Інші інструкції:</strong></p>
+            <p>📚 <strong>Повні інструкції:</strong></p>
             <div class="nav-links">
-                <a href="commands.html" class="nav-link">🏠 Головна</a>
-                <a href="GUILD_COMMANDS.html" class="nav-link">🏰 Гільдії</a>
-                <a href="TERRITORIES.html" class="nav-link">🗺️ Території</a>
-                <a href="CASINO_GUIDE.html" class="nav-link">🎰 Казино</a>
-                <a href="GUILD_LEVEL_GUIDE.html" class="nav-link">📊 Рівні</a>
-                <a href="GUILD_WARRIORS_GUIDE.html" class="nav-link">⚔️ Воїни</a>
+                <a href="ALL_COMMANDS.html" class="bot-link">📄 Всі Команди</a>
+                <a href="GUILD_COMMANDS.html" class="bot-link">🏰 Гільдії</a>
+                <a href="TERRITORIES.html" class="bot-link">🗺️ Території</a>
+                <a href="CASINO_GUIDE.html" class="bot-link">🎰 Казино</a>
+                <a href="GUILD_LEVEL_GUIDE.html" class="bot-link">📊 Рівні</a>
+                <a href="GUILD_WARRIORS_GUIDE.html" class="bot-link">⚔️ Воїни</a>
             </div>
             <p style="margin-top: 30px;">
-                <a href="https://t.me/YOUR_BOT" class="nav-link">🤖 Відкрити Бота</a>
+                🤖 <strong>Запустити бота:</strong><br>
+                <a href="https://t.me/trash1161_bot" class="bot-link">Відкрити в Telegram</a>
             </p>
             <p style="margin-top: 20px; font-size: 0.9em;">
-                Останнє оновлення: 2 квітня2026<br>
-                Версія: 2.0.0
+                Останнє оновлення: 2 квітня 2026<br>
+                Версія: 3.1 • 175 команд
             </p>
         </div>
     </div>
